@@ -1,0 +1,31 @@
+.example-button-row {
+    display: table-cell;
+    max-width: 600px;
+    
+  }
+   
+  #colors{
+    border: 2px solid black;
+    border-radius: 20px;
+    float: right;
+    background-color: rgb(164, 167, 233);
+  } 
+
+  /* CSS for table */
+
+  table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+ .container{
+  max-width: 1200px;
+  margin: 0 auto;
+ }
+
+  
+ 
