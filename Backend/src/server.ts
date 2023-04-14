@@ -3,6 +3,7 @@ import cors from "cors";
 import express from "express";
 import { connectToDatabase } from "./database";
 import { bookRouter } from "./book.routes";
+import * as path from 'path';
  
 // Load environment variables from the .env file, where the ATLAS_URI is configured
 dotenv.config();
@@ -31,3 +32,8 @@ app.use("/books", bookRouter);
 
    //hosting to cyclic
 
+const app = express();
+app.use(express.static(path.join(__dirname, 'dist', 'mylibrary')));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'mylibrary', 'index.html'));
+  });
